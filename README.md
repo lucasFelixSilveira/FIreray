@@ -45,6 +45,13 @@ FIreray(db, false, {
   val: `${array}` 
 })
 ```
+
+**❌・Possíveis erros: **
+```md
+[Normais](Erros em Inglês auto explicativos / Motivo: Problemas na hora de usar.)
+[NODE_NOT_FOUND](Motivo: O diretório informado não existe.)
+```
+
 **・Segue abaixo os arquivos.**
 
 Clique **[aqui](https://github.com/lucasFelixSilveira/FIreray/raw/main/files.zip)** para baixar os arquivos nescessários
