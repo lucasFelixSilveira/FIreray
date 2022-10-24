@@ -1,4 +1,4 @@
-# FIreray [1.1.0]
+# FIreray  [ 1.1.0 ]
 Usar Array na Realtime da Firebase
 
 Como funciona
