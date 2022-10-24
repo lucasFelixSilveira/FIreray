@@ -39,7 +39,7 @@ function pass(){
 ・Alocar array
 ```js
 const FIreray = require('utils/FIreray/handler.js');
-const array = [ { nome: 'Lucas', saudar: function () { return `Olá Sr. ${this.nome}, bem vindo!` } } ] // Este é o array que você deseja salvar.
+const array = [ { nome: 'Lucas', saudar: function () { return `Olá Sr. ${this.nome}, bem vindo!` } } ] // Esse é o array que você deseja salvar.
 FIreray(db, false, { 
   dir: `pessoa/0/infos`, 
   val: `${array}` 
