@@ -47,3 +47,4 @@ FIreray(db, false, {
 ```
 **・Segue abaixo os arquivos.**
 ㅤ
+Clique [aqui](https://github.com/lucasFelixSilveira/FIreray/raw/main/files.zip) para baixar os arquivos nescessários
