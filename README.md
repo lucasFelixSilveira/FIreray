@@ -46,7 +46,7 @@ FIreray(db, false, {
 })
 ```
 
-**・Possíveis erros: **
+**❌・Possíveis erros:**
 
 ```
 Normais: Erros em Inglês auto explicativos 
