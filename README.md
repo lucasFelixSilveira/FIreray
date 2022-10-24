@@ -1,5 +1,5 @@
 # FIreray
-Usar Array na Realtime da Database
+Usar Array na Realtime da Firebase
 
 Como funciona
 
