@@ -47,9 +47,12 @@ FIreray(db, false, {
 ```
 
 **❌・Possíveis erros: **
-```md
-[Normais](Erros em Inglês auto explicativos / Motivo: Problemas na hora de usar.)
-[NODE_NOT_FOUND](Motivo: O diretório informado não existe.)
+
+```
+Normais: Erros em Inglês auto explicativos 
+  Motivo: Problemas na hora de usar.
+
+NODE_NOT_FOUND: Motivo: O diretório informado não existe.
 ```
 
 **・Segue abaixo os arquivos.**
