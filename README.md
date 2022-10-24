@@ -50,7 +50,7 @@ FIreray(db, false, {
 
 ```
 Normais: Erros em Inglês auto explicativos 
-  Motivo: Problemas na hora de usar.
+  Motivo: Problemas na hora de usar get ou set.
 
 NODE_NOT_FOUND: Motivo: O diretório informado não existe.
 ```
