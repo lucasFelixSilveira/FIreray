@@ -1,62 +1,89 @@
-# FIreray  [ 1.1.0 ]
+# FIreray  [ 2.0.0 ]
 Usar Array na Realtime da Firebase
 
 Como funciona
 
-Na sua pasta raiz, crie a pasta **utils** e lá dentro crie outra chamada **FIreray**.
+Abra seu projeto no Visual Studio ou outra IDE e use: 
 ```
-📂 Utils
-  📂 FIreray
+npm i fireray
 ```
-Lá dentro, cole os arquivos baixados.
-```
-📂 Utils
-  📂 FIreray
-    📋 handler.js
-    📋 response.js
-```
+Aguarde a instação do modulo e pronto! Agora você já pode codar na **Firebase** usando **Arrays**
 
 **・Como usar?**
-é meio complexo, mas vamos lá.
+Agora na nova atualização ( 2.0.0 para cima ) é muito mais simples a forma de uso.
 
-・Buscar array
+・exemplo de **Script:** - index.js
 ```js
-const FIreray = require('utils/FIreray/handler.js');
-var array = [];
-const eval_ = FIreray(db, true, { 
-  dir: `member/0/items`, // Diretório onde o array está salvo.
-  var: 'array', // Nome da variável que deseja salvar o array.
-  exe: 'pass' // Nome da função onde após você coletar o array você deseja executar. 
+const FIreray = require('fireray');
+const firebase = require('firebase');
+const express = require('express');
+const app = express();
+const secrets = require('./env.json');
+
+firebase.initializeApp(secrets['firebase']);
+const db = firebase.database();
+
+const names = [
+  'bruno, 'ana', 'júlia', 'augusto', 'josé', 'kauã', 'wendel'
+]
+
+const newUsers = [
+  {
+    name: names[Math.floor(Math.random() * names.length)]
+  }, {
+    name: names[Math.floor(Math.random() * names.length)]
+  }
+]
+
+app.get('/setUsers', (req, res) => {
+  let users   
+  eval(FIreray.get(db, `users`, {
+    var: 'users', exe: 'nextTick'
+  }))
+  function nextTick() {
+    if(!users) {
+      FIreray.set(db, `users`, newUsers)
+    } else {
+      function some(x) {
+        FIreray.push(db, `users`, x)  
+      } 
+      newUsers.forEach(item => {
+        some(item)
+      })
+    }
+  }  
 })
-eval(eval_)
-function pass(){
-  console.log(array);
-  // Aqui você poderá fazer todo seu código.
-  // LEMBRE-SE o seu array está salvo na variável que você escolheu.
+
+app.listen(8080, () => {
+  console.log('[Site] Online na localhost:8080')
+})
+```
+
+**$** Acima temos todos os tipos de extenssões.
+```diff
+- Push
+- Set
+- Get
+```
+
+**・Set**
+```js
+FIreray.set(db, `dir`, array)
+```
+
+**・Get**
+```js
+let returnedArray = [];
+function nextTick() {
+  console.log(returnedArray);
 }
+eval(FIreray.get(db, `dir`, {
+  exe: 'nextTick', var: 'returnedArray'
+}))
 ```
 
-・Alocar array
+**・Push**
 ```js
-const FIreray = require('utils/FIreray/handler.js');
-const array = [ { nome: 'Lucas', items: [{name: 'no name', id: 3, value: 50}] } ] // Esse é o array que você deseja salvar.
-FIreray(db, false, { 
-  dir: `pessoa/infos`, 
-  val: array
-})
+const object = { nome: 'Mauricio', idade: 23 }
+FIreray.push(db, `dir`, object)
 ```
-( O array não pode conter functions! )
-
-**❌・Possíveis erros:**
-
-```
-Normais: Erros em Inglês auto explicativos 
-  Motivo: Problemas na hora de usar get ou set.
-
-NODE_NOT_FOUND: 
-  Motivo: O diretório informado não existe.
-```
-
-**・Segue abaixo os arquivos.**
-
-Clique **[aqui](https://github.com/lucasFelixSilveira/FIreray/raw/main/files.zip)** para baixar os arquivos nescessários
