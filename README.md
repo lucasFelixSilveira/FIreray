@@ -30,6 +30,7 @@ app.get('/get', (req, res) => {
     }))
     function nextTick() {
         res.send(`
+            <h1>${array}</h1>
             <script> const array = ${array} </script>
         `) // Para debugar no console da localhost a array informada.
     }
