@@ -24,7 +24,7 @@ firebase.initializeApp(secrets['firebase']);
 const db = firebase.database();
 
 const names = [
-  'bruno, 'ana', 'júlia', 'augusto', 'josé', 'kauã', 'wendel'
+  'bruno', 'ana', 'júlia', 'augusto', 'josé', 'kauã', 'wendel'
 ]
 
 const newUsers = [
