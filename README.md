@@ -1,4 +1,4 @@
-# FIreray  [ 2.0.0 ]
+# FIreray  [ 2.0.2 ]
 Usar Array na Realtime da Firebase
 
 Como funciona
@@ -23,39 +23,30 @@ const secrets = require('./env.json');
 firebase.initializeApp(secrets['firebase']);
 const db = firebase.database();
 
-const names = [
-  'bruno', 'ana', 'júlia', 'augusto', 'josé', 'kauã', 'wendel'
-]
-
-const newUsers = [
-  {
-    name: names[Math.floor(Math.random() * names.length)]
-  }, {
-    name: names[Math.floor(Math.random() * names.length)]
-  }
-]
-
-app.get('/setUsers', (req, res) => {
-  let users   
-  eval(FIreray.get(db, `users`, {
-    var: 'users', exe: 'nextTick'
-  }))
-  function nextTick() {
-    if(!users) {
-      FIreray.set(db, `users`, newUsers)
-    } else {
-      function some(x) {
-        FIreray.push(db, `users`, x)  
-      } 
-      newUsers.forEach(item => {
-        some(item)
-      })
+app.get('/get', (req, res) => {
+    let array;
+    eval(FIreray.get(db, `users`, {
+        var: 'array', exe: 'nextTick'
+    }))
+    function nextTick() {
+        res.send(`
+            <script> const array = ${array} </script>
+        `) // Para debugar no console da localhost a array informada.
     }
-  }  
+})
+
+app.get('/', (req, res) => res.redirect('/get'))
+
+app.get('/push', (req, res) => {
+    const nomes = [
+        'Lucas', 'Ana', 'Pedro', 'Carlos', 'Kauã', 'Júlia', 'Camila', 'Laura', 'Breno', 'Augusto', 'João', 'Kleber'
+    ]
+    FIreray.push(db, `users`, { name: nomes[Math.floor(Math.random() * nomes.length)] })
+    res.redirect('/')
 })
 
 app.listen(8080, () => {
-  console.log('[Site] Online na localhost:8080')
+    console.log('[Ready] Site online em: localhost:8080')
 })
 ```
 
