@@ -57,11 +57,13 @@ app.listen(8080, () => {
 })
 ```
 
-**$** Acima temos todos os tipos de extenssões.
+**$** abaixo temos todos os tipos de extenssões.
 ```diff
 - Push
 - Set
 - Get
+- Delete
+- Clone
 ```
 
 **・Set**
@@ -85,3 +87,19 @@ eval(FIreray.get(db, `dir`, {
 const object = { nome: 'Mauricio', idade: 23 }
 FIreray.push(db, `dir`, object)
 ```
+
+**・Delete**
+```js
+FIreray.delete(db, `dir`)
+```
+
+**・Clone**
+```js
+FIreray.clone(db, `dir`, `dir2`)
+/* 
+O dir é o array que você deseja clonar e o dir2 onde deseja salvar a clonagem
+*/
+```
+
+Deseja ajudar no desenvolvimento?
+- Pix: `lucasdwbfff@gmail.com`
