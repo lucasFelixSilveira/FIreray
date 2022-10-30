@@ -1,4 +1,4 @@
-# FIreray  [ 2.0.5 ]
+# FIreray  [ 2.1.0 ]
 Usar Array na Realtime da Firebase
 
 Como funciona
@@ -67,11 +67,13 @@ app.listen(8080, () => {
 ```
 
 **・Set**
+ㅤ`Defina exatamente a ARRAY`
 ```js
 FIreray.set(db, `dir`, array)
 ```
 
 **・Get**
+ㅤ`Colete o array`
 ```js
 let returnedArray = [];
 function nextTick() {
@@ -83,17 +85,20 @@ eval(FIreray.get(db, `dir`, {
 ```
 
 **・Push**
+ㅤ`Adicione novas informações ao array STRING / BOOLEAN / NUMBER / OBJECT / ARRAY`
 ```js
 const object = { nome: 'Mauricio', idade: 23 }
 FIreray.push(db, `dir`, object)
 ```
 
 **・Delete**
+ㅤ`Delete a array salva`
 ```js
 FIreray.delete(db, `dir`)
 ```
 
 **・Clone**
+ㅤ`Copie x array e salve na localização y`
 ```js
 FIreray.clone(db, `dir`, `dir2`)
 /* 
