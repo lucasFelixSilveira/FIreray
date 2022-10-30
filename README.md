@@ -25,14 +25,20 @@ const db = firebase.database();
 
 app.get('/get', (req, res) => {
     let array;
-    eval(FIreray.get(db, `users`, {
-        var: 'array', exe: 'nextTick'
-    }))
+    try {
+        eval(FIreray.get(db, `users`, {
+            var: 'array', exe: 'nextTick'
+        }))
+    } catch(er) {
+        array = undefined;
+        nextTick()
+    }
     function nextTick() {
+        console.log(array)
         res.send(`
             <h1>${array}</h1>
             <script> const array = ${array} </script>
-        `) // Para debugar no console da localhost a array informada.
+        `)
     }
 })
 
