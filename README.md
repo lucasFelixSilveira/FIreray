@@ -36,8 +36,8 @@ app.get('/get', (req, res) => {
     function nextTick() {
         console.log(array)
         res.send(`
-            <h1>${array}</h1>
-            <script> const array = ${array} </script>
+            <h1>${JSON.stringify(array)}</h1>
+            <script> const array = ${JSON.stringify(array)} </script>
         `)
     }
 })
