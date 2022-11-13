@@ -1,4 +1,4 @@
-# FIreray  [ 2.1.1 ]
+# FIreray  [ 2.1.2 ]
 
 <div align="center">
     <img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241" height="130">
