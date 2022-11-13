@@ -128,7 +128,9 @@ O dir é o array que você deseja clonar e o dir2 onde deseja salvar a clonagem
 
 # Direções
 - [Módulo npm](https://www.npmjs.com/package/fireray)
-- [Licence MIT](https://github.com/lucasFelixSilveira/FIreray/blob/main/FIreray/licence)
+- [Projeto na github](https://github.com/lucasFelixSilveira/FIreray)
+- [Licença MIT](https://github.com/lucasFelixSilveira/FIreray/blob/main/FIreray/licence)
+- [Discord da comunidade](https://discord.gg/cdEnEtwehC)
 
 # Notas do desenvolvedor
 
