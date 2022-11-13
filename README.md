@@ -126,5 +126,7 @@ O dir é o array que você deseja clonar e o dir2 onde deseja salvar a clonagem
 */
 ```
 
+# Notas do desenvolvedor
+
 Deseja ajudar no desenvolvimento?
 - Donate por Pix: `lucasdwbfff@gmail.com`
