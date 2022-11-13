@@ -1,9 +1,19 @@
 # FIreray  [ 2.1.0 ]
-Usar Array na Realtime da Firebase
 
-Como funciona
+<div align="center">
+    <img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241" height="130">
+    <br>
+    Usar Array na Realtime da Firebase
+</div>
 
-[<img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241">]
+# Sobre
+A FIreray trabalha com [Node.js](https://nodejs.org), em conjunto com a [Firebase](https://firebase.google.com/), fazendo a [Real Time](https://firebase.google.com/docs/database/web/start) aceitar arrays.
+
+- Sempre com novidades em produção
+- Frequentemente atualizada
+- O mais optmizada possível
+
+# Instalação
 
 Abra seu projeto no Visual Studio ou outra IDE e use: 
 ```
@@ -11,10 +21,14 @@ npm i fireray
 ```
 Aguarde a instação do modulo e pronto! Agora você já pode codar na **Firebase** usando **Arrays**
 
-**・Como usar?**
-Agora na nova atualização ( 2.0.0 para cima ) é muito mais simples a forma de uso.
+# Exemplo de uso
 
-・exemplo de **Script:** - index.js
+Instale o módulo:
+```
+npm i fireray
+```
+
+Crie usando express, uma localhost com que dê para ver as informações da array e também enviar atualizações:
 ```js
 const FIreray = require('fireray');
 const firebase = require('firebase');
@@ -59,6 +73,8 @@ app.listen(8080, () => {
 })
 ```
 
+# Comandos
+
 **$** abaixo temos todos os tipos de extenssões.
 ```diff
 - Push
@@ -67,6 +83,8 @@ app.listen(8080, () => {
 - Delete
 - Clone
 ```
+
+# Modo de uso
 
 **・Set**
 ㅤ`Defina exatamente a ARRAY`
@@ -109,4 +127,4 @@ O dir é o array que você deseja clonar e o dir2 onde deseja salvar a clonagem
 ```
 
 Deseja ajudar no desenvolvimento?
-- Pix: `lucasdwbfff@gmail.com`
+- Donate por Pix: `lucasdwbfff@gmail.com`
