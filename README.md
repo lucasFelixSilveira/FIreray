@@ -15,7 +15,7 @@ A FIreray trabalha com [Node.js](https://nodejs.org), em conjunto com a [Firebas
 
 # Instalação
 
-Abra seu projeto no Visual Studio ou outra IDE e use: 
+Abra seu projeto no Visual Studio ou outra IDE, abra o terminal e use: 
 ```
 npm i fireray
 ```
