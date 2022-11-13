@@ -16,7 +16,7 @@ A FIreray trabalha com [Node.js](https://nodejs.org), em conjunto com a [Firebas
 # Instalação
 
 Abra seu projeto no Visual Studio ou outra IDE, abra o terminal e use: 
-```
+```sh-session
 npm i fireray
 ```
 Aguarde a instação do modulo e pronto! Agora você já pode usar a **Firebase** com **Arrays**
@@ -24,7 +24,7 @@ Aguarde a instação do modulo e pronto! Agora você já pode usar a **Firebase*
 # Exemplo de uso
 
 Instale o módulo:
-```
+```sh-session
 npm i fireray
 ```
 
