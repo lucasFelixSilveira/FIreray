@@ -19,7 +19,7 @@ Abra seu projeto no Visual Studio ou outra IDE e use:
 ```
 npm i fireray
 ```
-Aguarde a instação do modulo e pronto! Agora você já pode codar na **Firebase** usando **Arrays**
+Aguarde a instação do modulo e pronto! Agora você já pode usar a **Firebase** com **Arrays**
 
 # Exemplo de uso
 
