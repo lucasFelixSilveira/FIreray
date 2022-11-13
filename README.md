@@ -75,7 +75,7 @@ app.listen(8080, () => {
 
 # Comandos
 
-**$** abaixo temos todos os tipos de extenssões.
+- abaixo temos todos os tipos de extenssões.
 ```diff
 - Push
 - Set
