@@ -3,6 +3,8 @@ Usar Array na Realtime da Firebase
 
 Como funciona
 
+[<img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241">]
+
 Abra seu projeto no Visual Studio ou outra IDE e use: 
 ```
 npm i fireray
