@@ -159,3 +159,4 @@ Correção de bugs
 
 Deseja ajudar no desenvolvimento?
 - Donate por Pix: `lucasdwbfff@gmail.com`
+a
