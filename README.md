@@ -1,4 +1,4 @@
-# FIreray  [ 2.2.0 ]
+# FIreray  [ 2.2.1 ]
 
 <div align="center">
     <img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241" height="130">
@@ -149,6 +149,10 @@ Observação: O diretório de onde irá ser salvo pode conter conteúdo.
 ```
 Adição o sistema de notas de versão no Github e no Npm;
 Adição do comando REPLACE
+```
+- **2.2.1**
+```
+Correção de bugs
 ```
 
 # Notas do desenvolvedor
