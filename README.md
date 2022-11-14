@@ -1,4 +1,4 @@
-# FIreray  [ 2.1.2 ]
+# FIreray  [ 2.2.0 ]
 
 <div align="center">
     <img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241" height="130">
@@ -19,7 +19,7 @@ Abra seu projeto no Visual Studio ou outra IDE, abra o terminal e use:
 ```sh-session
 npm i fireray
 ```
-Aguarde a instação do modulo e pronto! Agora você já pode usar a **Firebase** com **Arrays**
+- Aguarde a instação do modulo e pronto! Agora você já pode usar a **Firebase** com **Arrays**
 
 # Exemplo de uso
 
@@ -82,17 +82,18 @@ app.listen(8080, () => {
 - Get
 - Delete
 - Clone
+- Replace
 ```
 
 # Modo de uso
 
-**・Set**
+- **Set**
 ㅤ`Defina exatamente a ARRAY`
 ```js
 FIreray.set(db, `dir`, array)
 ```
 
-**・Get**
+- **Get**
 ㅤ`Colete o array`
 ```js
 let returnedArray = [];
@@ -104,25 +105,36 @@ eval(FIreray.get(db, `dir`, {
 }))
 ```
 
-**・Push**
+- **Push**
 ㅤ`Adicione novas informações ao array STRING / BOOLEAN / NUMBER / OBJECT / ARRAY`
 ```js
 const object = { nome: 'Mauricio', idade: 23 }
 FIreray.push(db, `dir`, object)
 ```
 
-**・Delete**
+- **Delete**
 ㅤ`Delete a array salva`
 ```js
 FIreray.delete(db, `dir`)
 ```
 
-**・Clone**
+- **Clone**
 ㅤ`Copie x array e salve na localização y`
 ```js
 FIreray.clone(db, `dir`, `dir2`)
 /* 
 O dir é o array que você deseja clonar e o dir2 onde deseja salvar a clonagem
+Observação: O diretório de onde irá ser salvo não pode conter nenhum conteúdo.
+*/
+```
+
+- **Replace**
+ㅤ`Copie x array e salve na localização y`
+```js
+FIreray.replace(db, `dir`, `dir2`)
+/* 
+O dir2 é o array que você deseja copiar e o dir2 onde deseja salvar a cópia
+Observação: O diretório de onde irá ser salvo pode conter conteúdo.
 */
 ```
 
@@ -131,6 +143,13 @@ O dir é o array que você deseja clonar e o dir2 onde deseja salvar a clonagem
 - [Projeto na github](https://github.com/lucasFelixSilveira/FIreray)
 - [Licença MIT](https://github.com/lucasFelixSilveira/FIreray/blob/main/FIreray/licence)
 - [Discord da comunidade](https://discord.gg/cdEnEtwehC)
+
+# Notas da versão
+- **2.2.0**
+```
+Adição o sistema de notas de versão no Github e no Npm;
+Adição do comando REPLACE
+```
 
 # Notas do desenvolvedor
 
