@@ -6,7 +6,7 @@
     Usar Array na Realtime da Firebase
 </div>
 
-# Sobre
+# Sobrea
 A FIreray trabalha com [Node.js](https://nodejs.org), em conjunto com a [Firebase](https://firebase.google.com/), fazendo a [Real Time](https://firebase.google.com/docs/database/web/start) aceitar arrays.
 
 - Sempre com novidades em produção
