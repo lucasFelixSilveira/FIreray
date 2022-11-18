@@ -1,4 +1,4 @@
-# FIreray  [ 2.2.2 ]
+# FIreray  [ 2.2.3 ]
 
 <div align="center">
     <img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241" height="130">
@@ -150,13 +150,17 @@ Observação: O diretório de onde irá ser salvo pode conter conteúdo.
 Adição o sistema de notas de versão no Github e no Npm;
 Adição do comando REPLACE
 ```
-- **2.2.1**
+- **2.2.1** & **2.2.2**
 ```
 Correção de bugs
 ```
-- **2.2.2**
+- **2.2.3**
 ```
-Correção de bugs no código ( Não afeta a performace )
+Adição de verificações TypeOf 
+( verificações de string para apenas aceitar STRINGS )
+( verificações de objects para apenas aceitar VARIAVEIS / OBJETOS )
+
+ps. No push e no Set não foram adicionados pois dentro de um array pode conter VÁRIOS tipos de dados.
 ```
 
 # Notas do desenvolvedor
