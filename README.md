@@ -1,4 +1,4 @@
-# FIreray  [ 2.2.4 ]
+# FIreray  [ 2.3.0 ]
 
 <div align="center">
     <img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241" height="130">
@@ -166,6 +166,11 @@ ps. No push e no Set não foram adicionados pois dentro de um array pode conter 
 ```
 Correção de bugs
 ```
+- **2.3.0**
+<br>
+ㅤㅤAdição do sistema de Alerta de atualização.
+<br><br>
+<img src="https://media.discordapp.net/attachments/983446685327966269/1043625710008402071/image.png?width=669&height=301">
 
 # Notas do desenvolvedor
 
