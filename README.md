@@ -1,4 +1,4 @@
-# FIreray  [ 2.3.0 ]
+# FIreray  [ 2.3.1 ]
 
 <div align="center">
     <img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241" height="130">
@@ -83,6 +83,7 @@ app.listen(8080, () => {
 - Delete
 - Clone
 - Replace
+- Remove
 ```
 
 # Modo de uso
@@ -138,6 +139,17 @@ Observação: O diretório de onde irá ser salvo pode conter conteúdo.
 */
 ```
 
+- **Remove**
+ㅤ`Delete um item especificado da array`
+```js
+FIreray.remove(db, `dir`, 1)
+```
+Onde está o `1` você deve informar o indice do item. Exemplo:
+```js
+const array = [ { name: 'Lucas', createdDate: '12/25' }, { name: 'Ana', createdDate: '12/25' },  ]
+// indice 1 é o dono do NAME Ana
+```
+
 # Direções
 - [Módulo npm](https://www.npmjs.com/package/fireray)
 - [Projeto na github](https://github.com/lucasFelixSilveira/FIreray)
@@ -166,12 +178,16 @@ ps. No push e no Set não foram adicionados pois dentro de um array pode conter 
 ```
 Correção de bugs
 ```
-- **2.3.0**
-<br>
-ㅤㅤAdição do sistema de Alerta de atualização.
-<br><br>
-<img src="https://media.discordapp.net/attachments/983446685327966269/1043625710008402071/image.png?width=669&height=301">
-
+- **2.3.1**
+```
+Adição do sistema de alerta de atualizações
+- se comunica com a CLI requerindo a versão atual e verificando se é a em execução.
+```
+- **2.3.1**
+```
+Adição do comando REMOVE
+- Remove itens indesejados de um array.
+```
 # Notas do desenvolvedor
 
 Deseja ajudar no desenvolvimento?
