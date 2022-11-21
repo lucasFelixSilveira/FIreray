@@ -188,6 +188,10 @@ Adição do sistema de alerta de atualizações
 Adição do comando REMOVE
 - Remove itens indesejados de um array.
 ```
+- **2.3.2** & **2.3.3**
+```
+Correção de bugs
+```
 # Notas do desenvolvedor
 
 Deseja ajudar no desenvolvimento?
