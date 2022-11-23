@@ -6,7 +6,7 @@
     Usar Array na Realtime da Firebase
 </div>
 
-# linguagem
+# Linguagem
 > **click [here](https://github.com/lucasFelixSilveira/FIreray/blob/main/FIreray/assets/ENGLISH.md) to go to the documentation in English.**
 
 # Sobre
