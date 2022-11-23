@@ -6,6 +6,9 @@
     Usar Array na Realtime da Firebase
 </div>
 
+# linguagem
+> [🇺🇸 English version](https://github.com/lucasFelixSilveira/FIreray/blob/main/FIreray/assets/ENGLiSH.md)
+
 # Sobre
 A FIreray trabalha com [Node.js](https://nodejs.org), em conjunto com a [Firebase](https://firebase.google.com/), fazendo a [Real Time](https://firebase.google.com/docs/database/web/start) aceitar arrays.
 
@@ -75,7 +78,7 @@ app.listen(8080, () => {
 
 # Comandos
 
-- abaixo temos todos os tipos de extenssões.
+- abaixo temos todos os tipos de extensões.
 ```diff
 - Push
 - Set
@@ -157,12 +160,21 @@ const array = [ { name: 'Lucas', createdDate: '12/25' }, { name: 'Ana', createdD
 - [Discord da comunidade](https://discord.gg/cdEnEtwehC)
 
 # Notas da versão
-- **2.2.0**
+- **2.3.2** & **2.3.3**
 ```
-Adição o sistema de notas de versão no Github e no Npm;
-Adição do comando REPLACE
+Correção de bugs
 ```
-- **2.2.1** & **2.2.2**
+- **2.3.1**
+```
+Adição do comando REMOVE
+- Remove itens indesejados de um array.
+```
+- **2.3.0**
+```
+Adição do sistema de alerta de atualizações
+- se comunica com a CLI requerindo a versão atual e verificando se é a em execução.
+```
+- **2.2.4**
 ```
 Correção de bugs
 ```
@@ -174,24 +186,16 @@ Adição de verificações TypeOf
 
 ps. No push e no Set não foram adicionados pois dentro de um array pode conter VÁRIOS tipos de dados.
 ```
-- **2.2.4**
+- **2.2.1** & **2.2.2**
 ```
 Correção de bugs
 ```
-- **2.3.1**
+- **2.2.0**
 ```
-Adição do sistema de alerta de atualizações
-- se comunica com a CLI requerindo a versão atual e verificando se é a em execução.
+Adição o sistema de notas de versão no Github e no Npm;
+Adição do comando REPLACE
 ```
-- **2.3.1**
-```
-Adição do comando REMOVE
-- Remove itens indesejados de um array.
-```
-- **2.3.2** & **2.3.3**
-```
-Correção de bugs
-```
+
 # Notas do desenvolvedor
 
 Deseja ajudar no desenvolvimento?
