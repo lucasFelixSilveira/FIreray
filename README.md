@@ -1,4 +1,4 @@
-# FIreray  [ 2.3.4 ]
+# FIreray  [ 2.3.5 ]
 
 <div align="center">
     <img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241" height="130">
@@ -7,7 +7,7 @@
 </div>
 
 # linguagem
-> [🇺🇸 English version](https://github.com/lucasFelixSilveira/FIreray/blob/main/FIreray/assets/ENGLiSH.md)
+> **click [here](https://github.com/lucasFelixSilveira/FIreray/blob/main/FIreray/assets/ENGLISH.md) to go to the documentation in English.**
 
 # Sobre
 A FIreray trabalha com [Node.js](https://nodejs.org), em conjunto com a [Firebase](https://firebase.google.com/), fazendo a [Real Time](https://firebase.google.com/docs/database/web/start) aceitar arrays.
@@ -160,6 +160,10 @@ const array = [ { name: 'Lucas', createdDate: '12/25' }, { name: 'Ana', createdD
 - [Discord da comunidade](https://discord.gg/cdEnEtwehC)
 
 # Notas da versão
+- **2.3.5**
+```
+Documentação em Inglês.
+```
 - **2.3.2** & **2.3.3**
 ```
 Correção de bugs
