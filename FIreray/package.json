@@ -1,0 +1,11 @@
+{
+  "name": "fireray",
+  "version": "2.3.6",
+  "description": "Use arrays na firebase do jeito mais simples!",
+  "author": "Lucas Felix Silveira <lucasdwbfff@gmail.com>",
+  "repository": "lucasFelixSilveira/FIreray",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
