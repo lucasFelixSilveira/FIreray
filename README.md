@@ -1,4 +1,4 @@
-# FIreray  [ 2.3.5 ]
+# FIreray  [ 2.3.6 ]
 
 <div align="center">
     <img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241" height="130">
@@ -160,6 +160,11 @@ const array = [ { name: 'Lucas', createdDate: '12/25' }, { name: 'Ana', createdD
 - [Discord da comunidade](https://discord.gg/cdEnEtwehC)
 
 # Notas da versão
+- **2.3.6**
+```
+Correção do bug do 0 no remove!
+Observação: https://www.youtube.com/watch?v=9URV25JlVK0
+```
 - **2.3.5**
 ```
 Documentação em Inglês.
