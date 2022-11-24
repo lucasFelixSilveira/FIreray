@@ -209,4 +209,3 @@ Adição do comando REPLACE
 
 Deseja ajudar no desenvolvimento?
 - Donate por Pix: `lucasdwbfff@gmail.com`
-a
