@@ -1,4 +1,4 @@
-# FIreray  [ 2.3.6 ]
+# FIreray  [ 2.4.0 ]
 
 <div align="center">
     <img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241" height="130">
@@ -100,13 +100,12 @@ FIreray.set(db, `dir`, array)
 - **Get**
 ㅤ`Colete o array`
 ```js
-let returnedArray = [];
-function nextTick() {
-  console.log(returnedArray);
-}
-eval(FIreray.get(db, `dir`, {
-  exe: 'nextTick', var: 'returnedArray'
-}))
+(async () => { // Apenas para o uso do "await"
+
+    let array = await FIreray.get(db, `dir`)
+    console.log(array)
+
+})()
 ```
 
 - **Push**
@@ -160,6 +159,14 @@ const array = [ { name: 'Lucas', createdDate: '12/25' }, { name: 'Ana', createdD
 - [Discord da comunidade](https://discord.gg/cdEnEtwehC)
 
 # Notas da versão
+- **2.4.0**
+```
+Mudança do get para sistema simplificado
+```
+- **2.3.7**
+```
+Adição do "usage" no comando remove!
+```
 - **2.3.6**
 ```
 Correção do bug do 0 no remove!
