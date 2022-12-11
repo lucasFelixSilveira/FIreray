@@ -1,4 +1,4 @@
-# FIreray  [ 2.4.0 ]
+# FIreray  [ 2.4.1 ]
 
 <div align="center">
     <img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241" height="130">
@@ -43,22 +43,14 @@ firebase.initializeApp(secrets['firebase']);
 const db = firebase.database();
 
 app.get('/get', (req, res) => {
-    let array;
-    try {
-        eval(FIreray.get(db, `users`, {
-            var: 'array', exe: 'nextTick'
-        }))
-    } catch(er) {
-        array = undefined;
-        nextTick()
-    }
-    function nextTick() {
+    (async () => {
+        let array = await FIreray.get(db, 'users')
         console.log(array)
         res.send(`
             <h1>${JSON.stringify(array)}</h1>
             <script> const array = ${JSON.stringify(array)} </script>
         `)
-    }
+    })()
 })
 
 app.get('/', (req, res) => res.redirect('/get'))
