@@ -1,4 +1,4 @@
-# FIreray  [ 2.4.1 ]
+# FIreray  [ 2.4.3 ]
 
 <div align="center">
     <img src="https://media.discordapp.net/attachments/983446685327966269/1041340936367644783/FIreray-removebg-preview.png?width=662&height=241" height="130">
@@ -6,17 +6,17 @@
     Usar Array na Realtime da Firebase
 </div>
 
-# Linguagem
+# 💬 Linguagem
 > **click [here](https://github.com/lucasFelixSilveira/FIreray/blob/main/FIreray/assets/ENGLISH.md) to go to the documentation in English.**
 
-# Sobre
+# ⁉ Sobre
 A FIreray trabalha com [Node.js](https://nodejs.org), em conjunto com a [Firebase](https://firebase.google.com/), fazendo a [Real Time](https://firebase.google.com/docs/database/web/start) aceitar arrays.
 
 - Sempre com novidades em produção
 - Frequentemente atualizada
 - O mais optmizada possível
 
-# Instalação
+# 🟣 Instalação
 
 Abra seu projeto no Visual Studio ou outra IDE, abra o terminal e use: 
 ```sh-session
@@ -24,133 +24,48 @@ npm i fireray
 ```
 - Aguarde a instação do modulo e pronto! Agora você já pode usar a **Firebase** com **Arrays**
 
-# Exemplo de uso
+# ♻ Uso
 
-Instale o módulo:
-```sh-session
-npm i fireray
+- `1.` Dependendo se você vai usar a **_[Fsdb](https://fsdb.tk)_** ou a **_[Firebase](https://firebase.google.com/)_** ( Não ambas ) você pode simplificar o uso da **FIreray** usando:
+```js
+FIreray.singleUse('fsdb')    
 ```
 
-Crie usando express, uma localhost com que dê para ver as informações da array e também enviar atualizações:
+<div align="center"> ou <br><br> </div>
+
 ```js
-const FIreray = require('fireray');
-const firebase = require('firebase');
-const express = require('express');
-const app = express();
-const secrets = require('./env.json');
-
-firebase.initializeApp(secrets['firebase']);
-const db = firebase.database();
-
-app.get('/get', (req, res) => {
-    (async () => {
-        let array = await FIreray.get(db, 'users')
-        console.log(array)
-        res.send(`
-            <h1>${JSON.stringify(array)}</h1>
-            <script> const array = ${JSON.stringify(array)} </script>
-        `)
-    })()
-})
-
-app.get('/', (req, res) => res.redirect('/get'))
-
-app.get('/push', (req, res) => {
-    const nomes = [
-        'Lucas', 'Ana', 'Pedro', 'Carlos', 'Kauã', 'Júlia', 'Camila', 'Laura', 'Breno', 'Augusto', 'João', 'Kleber'
-    ]
-    FIreray.push(db, `users`, { name: nomes[Math.floor(Math.random() * nomes.length)] })
-    res.redirect('/')
-})
-
-app.listen(8080, () => {
-    console.log('[Ready] Site online em: localhost:8080')
+FIreray.singleUse('firebase')    
+```
+- - O uso também é simples. Só se basear no modo de uso normal e usar função coletada.
+```js
+FIreray.use('get', async (func) => {
+    const get = await func(db, 'directory')
+    console.log(get)
 })
 ```
 
-# Comandos
-
-- abaixo temos todos os tipos de extensões.
-```diff
-- Push
-- Set
-- Get
-- Delete
-- Clone
-- Replace
-- Remove
-```
-
-# Modo de uso
-
-- **Set**
-ㅤ`Defina exatamente a ARRAY`
+- `2.` Se você vai usar os 2, infelizmente você tera que sempre ficar usando o prefixo `fs` ou `fb`. Veja o exemplo abaixo:
+- - Lembrando que `fs` é para a Fsdb e `fb` para a Firebase!
 ```js
-FIreray.set(db, `dir`, array)
+const db = fsdb.database();
+
+await FIreray.fsSet(db, 'users', [ { user: 0, name: 'Lucas F. Sil' }, { user: 1, name: 'Ana C. Rod' }, { user: 2, name: 'Vitor G. Sil' }, { user: 3, name: 'Kauã J. San' } ])
+const get = await FIreray.get(db, 'users');
+
+console.log(get)
 ```
 
-- **Get**
-ㅤ`Colete o array`
-```js
-(async () => { // Apenas para o uso do "await"
-
-    let array = await FIreray.get(db, `dir`)
-    console.log(array)
-
-})()
-```
-
-- **Push**
-ㅤ`Adicione novas informações ao array STRING / BOOLEAN / NUMBER / OBJECT / ARRAY`
-```js
-const object = { nome: 'Mauricio', idade: 23 }
-FIreray.push(db, `dir`, object)
-```
-
-- **Delete**
-ㅤ`Delete a array salva`
-```js
-FIreray.delete(db, `dir`)
-```
-
-- **Clone**
-ㅤ`Copie x array e salve na localização y`
-```js
-FIreray.clone(db, `dir`, `dir2`)
-/* 
-O dir é o array que você deseja clonar e o dir2 onde deseja salvar a clonagem
-Observação: O diretório de onde irá ser salvo não pode conter nenhum conteúdo.
-*/
-```
-
-- **Replace**
-ㅤ`Copie x array e salve na localização y`
-```js
-FIreray.replace(db, `dir`, `dir2`)
-/* 
-O dir2 é o array que você deseja copiar e o dir2 onde deseja salvar a cópia
-Observação: O diretório de onde irá ser salvo pode conter conteúdo.
-*/
-```
-
-- **Remove**
-ㅤ`Delete um item especificado da array`
-```js
-FIreray.remove(db, `dir`, 1)
-```
-Onde está o `1` você deve informar o indice do item. Exemplo:
-```js
-const array = [ { name: 'Lucas', createdDate: '12/25' }, { name: 'Ana', createdDate: '12/25' },  ]
-// indice 1 é o dono do NAME Ana
-```
-
-# Direções
+# 🔗 Direções
 - [Módulo npm](https://www.npmjs.com/package/fireray)
 - [Projeto na github](https://github.com/lucasFelixSilveira/FIreray)
 - [Licença MIT](https://github.com/lucasFelixSilveira/FIreray/blob/main/FIreray/licence)
 - [Discord da comunidade](https://discord.gg/cdEnEtwehC)
 
-# Notas da versão
+# 📄 Notas da versão
+- **2.4.1** & **2.4.2**
+```
+Correção de bugs
+```
 - **2.4.0**
 ```
 Mudança do get para sistema simplificado
